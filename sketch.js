@@ -26,12 +26,13 @@ let changingSquares;
 
 function setup() {
     createCanvas(800, 450);
+    frameRate(60);
 
     // initialize the speed recognizer
     speechRecognizer = new p5.SpeechRec("en-US", onSpeech);
     speechRecognizer.continuous = true;
     speechRecognizer.interimResults = true;
-    speechRecognizer.start()
+    speechRecognizer.start();
 
     // the Meyda analyzer
     analyzer = Meyda.createMeydaAnalyzer({
